@@ -6,7 +6,7 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:48:32 by rmaanane          #+#    #+#             */
-/*   Updated: 2025/04/05 11:46:27 by rmaanane         ###   ########.fr       */
+/*   Updated: 2025/04/05 13:04:39 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	check_digit(char *str)
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
 		{
-			write(1, "❌ PID must contain only numbers!\n", 36);
+			write(2, "❌ PID must contain only numbers!\n", 36);
 			exit(1);
 		}
 		i++;
@@ -39,9 +39,9 @@ long	ft_atol(char *str)
 	{
 		check_digit(str);
 		result = result * 10 + (str[i] - '0');
-		if (result >= INT_MAX)
+		if (result > INT_MAX)
 		{
-			write(1, "Error\n", 6);
+			write(2, "❌ Error: PID exceeds INT_MAX!\n", 33);
 			exit(1);
 		}
 		i++;
@@ -60,7 +60,7 @@ void	send_char(char c, int pid)
 		{
 			if (kill(pid, SIGUSR1) == -1)
 			{
-				write(1, "Error\n", 6);
+				write(2, "Error\n", 6);
 				exit(1);
 			}
 		}
@@ -68,7 +68,7 @@ void	send_char(char c, int pid)
 		{
 			if (kill(pid, SIGUSR2) == -1)
 			{
-				write(1, "Error\n", 6);
+				write(2, "Error\n", 6);
 				exit(1);
 			}
 		}
@@ -93,5 +93,5 @@ int	main(int ac, char **av)
 		send_string(av[2], pid);
 	}
 	else
-		write(1, "Error", 5);
+		write(2, "Error", 5);
 }

@@ -20,12 +20,12 @@ $(NAME_CLIENT): $(OBJ_CLIENT)
 	$(CC) $(CFLAGS) $(OBJ_CLIENT) -o $(NAME_CLIENT)
 
 clean:
-	$(RM) $(OBJ_SERVER) $(OBJ_CLIENT)
+	@$(RM) $(OBJ_SERVER) $(OBJ_CLIENT)
 
 fclean: clean
 	@$(RM) $(NAME_SERVER) $(NAME_CLIENT)
 
 re: fclean all
 
-.SECONDARY: $(OBJ)
+.SECONDARY : $(OBJ_SERVER) $(OBJ_CLIENT)
 .PHONY: all clean fclean re
