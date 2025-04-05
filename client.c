@@ -6,14 +6,11 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:48:32 by rmaanane          #+#    #+#             */
-/*   Updated: 2025/04/05 09:48:35 by rmaanane         ###   ########.fr       */
+/*   Updated: 2025/04/05 11:46:27 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
-#include <signal.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "minitalk.h"
 
 void	check_digit(char *str)
 {

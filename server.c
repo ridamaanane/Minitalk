@@ -6,12 +6,11 @@
 /*   By: rmaanane <rmaanane@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:48:40 by rmaanane          #+#    #+#             */
-/*   Updated: 2025/04/05 09:48:42 by rmaanane         ###   ########.fr       */
+/*   Updated: 2025/04/05 11:46:36 by rmaanane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <signal.h>
-#include <unistd.h>
+#include "minitalk.h"
 
 void	ft_putnbr(int n)
 {
