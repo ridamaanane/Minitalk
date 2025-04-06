@@ -133,6 +133,7 @@ To support Unicode:
 ### 📌 Example
 
 If the client sends "emoji alien': `👽`  
+https://www.fileformat.info/info/unicode/char/1f47d/index.htm  
 UTF-32 (decimal)	: 128,125  
 Binary code : 11111010001111101  
 We will work in this range : U+10000 to U+10FFFF       | `11110uvv` `10vvwwww` `10xxxxyy` `10yyzzzz`    | 4 bytes  
